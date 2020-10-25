@@ -221,7 +221,7 @@ main{
 }
 
 #handcards >div.grün{
-    background-image: url("./assets/UNO_Grün.png");
+    background-image: url("./assets/UNO_Gruen.png");
     background-position: center;
     background-size: 110%;
     background-repeat: no-repeat;
@@ -249,7 +249,7 @@ main{
 }
 
 #playstack >div.grün {
-    background-image: url("./assets/UNO_Grün.png");
+    background-image: url("./assets/UNO_Gruen.png");
     background-position: center;
     background-size: 110%;
     background-repeat: no-repeat;
