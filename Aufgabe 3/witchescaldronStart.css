@@ -1,0 +1,14 @@
+body {
+    background-color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+#witchescaldron {
+    width: 30%;
+    height: 50%
+}

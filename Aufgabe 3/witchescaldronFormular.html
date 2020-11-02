@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>witches caldron formular</title>
+    <link rel="stylesheet" href="./witchescaldronFormular.css">
+    <script src="./witchescaldronFormular.js"></script>
+</head>
+<body>
+    <h1>witches' caldron</h1>
+    <a href="./witchescaldronStart.html"> <img src="./witchescaldronbutton.jpg" id="homebutton"></a>
+
+    <form>
+            <div id="form">
+                <p>create your recipie</p>
+                <fieldset>
+                    <legend>recipe name</legend>
+                    <input type="text" name="recipename" id="recipename">
+                </fieldset>
+                <fieldset>
+                    <legend>information/risks</legend>
+                    <input type="text" name="inforisks" id="inforisks">
+                </fieldset>
+                <fieldset>
+                    <legend>effect</legend>
+                    <select name="effect" id="effect">
+                        <option value="aging">age</option>
+                        <option value="love">love</option>
+                        <option value="live">live</option>
+                        <option value="toxic">toxic</option>
+                        <option value="stone">stone</option>
+                        <option value="sleep">sleep</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <legend>length of effection</legend>
+                        <span id="lengtheffection">
+                            <span>
+                                1.0 hr
+                                <input type="range" name="lengtheffection" id="lengtheffection" min="1.0" max="24.0" step="0.5" value="0.5">
+                                24.0 hrs
+                            </span><br>
+                            <progress max="24.0" value="0.5">
+                        </span>
+                </fieldset>
+            </div>
+
+    </form>
+
+    <form>
+        <div id="ingredients">
+
+            <fieldset>
+                <legend>Extras</legend>
+                <input type="checkbox" name="Extra" class="ingredients" id="spider" value="spider" price="100">
+                <label for="spider">spider-legs:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkbox" name="Extra" class="ingredients" id="blood" value="blood" price="300">
+                <label for="blood">blood (ml):</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkbox" name="Extra" class="ingredients" id="fingernail" value="fingernail" price="12">
+                <label for="fingernail">fingernail/s:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend>Temperature</legend>
+                <span id="slider2">
+                    <span>
+                        100°C
+                        <input type="range" name="Temperature" id="temperature" min="100" max="1000" step="100"
+                            value="100">
+                        1000°C
+                    </span>
+                </span>
+            </fieldset>
+
+
+
+            <fieldset>
+                <legend>Intensity of stir</legend>
+                <input type="radio" name="Intensity" id="low" value="low" checked />
+                <label for="low">low</label>
+                <input type="radio" name="Intensity" id="middle" value="middle"/>
+                <label for="middle">middle</label>
+                <input type="radio" name="Intensity" id="high" value="high"/>
+                <label for="high">high</label>
+            </fieldset>
+
+
+
+
+            <fieldset id="totalTime">
+                <legend>Duration</legend>
+                <span id="slider3">
+                    <span>
+                        1min
+                        <input type="range" name="Duration" id="duration" min="1" max="60" step="1" value="1">
+                        60min
+                    </span>
+                </span>
+
+            </fieldset>
+
+            <fieldset id="texture">
+                <legend>Texture</legend>
+                <input type="radio" name="Texture" id="tough" value="tough" checked />
+                <label for="tough">tough</label>
+                <input type="radio" name="Texture" id="liquid" value="liquid" />
+                <label for="liquid">liquid</label>
+                <input type="radio" name="Texture" id="slimy" value="slimy" />
+                <label for="slimy">slimy</label>
+            </fieldset>
+
+            <fieldset id="finalColor">
+                <legend>Color</legend>
+                <input type="color" name="Color" id="color" value="#ff0000">
+            </fieldset>
+
+
+    <form>
+        <fieldset>
+        <div id="finishedrecipe">
+            <legend>your recipe</legend>
+            <div id="description"></div>
+            <div id="recipe"></div>
+        </div>
+        </fieldset>
+    </form>
+  
+</body>
+</html>
