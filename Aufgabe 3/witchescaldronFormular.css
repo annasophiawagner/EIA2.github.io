@@ -32,13 +32,6 @@ legend {
     
 }
 
-#finishedrecipe {
-    display: grid;
-    grid-template-columns: 40% auto;
-    grid-template-rows: auto auto;
-    position: relative;
-}
-
 #form {
     border: 1em;
     position: relative;
@@ -49,7 +42,4 @@ legend {
     border: 1em;
 }
 
-#recipe {
-
-}
 
