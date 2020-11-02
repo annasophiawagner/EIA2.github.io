@@ -12,17 +12,25 @@
     <h1>witches' caldron</h1>
     <a href="./witchescaldronStart.html"> <img src="./witchescaldronbutton.jpg" id="homebutton"></a>
 
-    <form>
+<!-- <form> für die allgemeinen Infos für den Zaubertranke (Name, Effekt, Infos, Risiken). --> 
+    <form id="infos">
             <div id="form">
+            <div id="formDesc">
                 <p>create your recipie</p>
+
+<!-- <fieldset> zur Erstellung des Rezeptnamens. --> 
                 <fieldset>
                     <legend>recipe name</legend>
                     <input type="text" name="recipename" id="recipename">
                 </fieldset>
+
+<!-- <fieldset> für die allgemeinen Infos und Risiken des Zaubertrankes.. --> 
                 <fieldset>
                     <legend>information/risks</legend>
                     <input type="text" name="inforisks" id="inforisks">
                 </fieldset>
+
+<!-- <fieldset> für die Auswahl des Effekts. --> 
                 <fieldset>
                     <legend>effect</legend>
                     <select name="effect" id="effect">
@@ -34,6 +42,8 @@
                         <option value="sleep">sleep</option>
                     </select>
                 </fieldset>
+
+<!-- <fieldset> für die Dauer der Wirkung des Zaubertrankes. -->                 
                 <fieldset>
                     <legend>length of effection</legend>
                         <span id="lengtheffection">
@@ -46,14 +56,20 @@
                         </span>
                 </fieldset>
             </div>
-
+            
     </form>
 
+<!-- <form> für die Zutaten und Anweisungen des Trankes. --> 
     <form>
         <div id="ingredients">
-
+<!-- <fieldset> für die Art und Anzahl der Zutaten. --> 
             <fieldset>
-                <legend>Extras</legend>
+                <legend>ingredients</legend>
+                <input type="checkbox" name="Extra" class="ingredients" id="fingernail" value="fingernail" price="12">
+                <label for="fingernail">fingernail/s:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
                 <input type="checkbox" name="Extra" class="ingredients" id="spider" value="spider" price="100">
                 <label for="spider">spider-legs:</label>
 
@@ -64,29 +80,9 @@
 
                 <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
 
-                <input type="checkbox" name="Extra" class="ingredients" id="fingernail" value="fingernail" price="12">
-                <label for="fingernail">fingernail/s:</label>
-
-                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
-
             </fieldset>
 
-
-
-            <fieldset>
-                <legend>Temperature</legend>
-                <span id="slider2">
-                    <span>
-                        100°C
-                        <input type="range" name="Temperature" id="temperature" min="100" max="1000" step="100"
-                            value="100">
-                        1000°C
-                    </span>
-                </span>
-            </fieldset>
-
-
-
+<!-- <fieldset> die Wahl der Intensivität des Zaubertrankes. --> 
             <fieldset>
                 <legend>Intensity of stir</legend>
                 <input type="radio" name="Intensity" id="low" value="low" checked />
@@ -97,38 +93,42 @@
                 <label for="high">high</label>
             </fieldset>
 
-
-
-
+<!-- <fieldset> die Dauer der Erstellung des Zaubertrankes. --> 
             <fieldset id="totalTime">
-                <legend>Duration</legend>
+                <legend>duration</legend>
                 <span id="slider3">
                     <span>
-                        1min
-                        <input type="range" name="Duration" id="duration" min="1" max="60" step="1" value="1">
-                        60min
+                        1 min
+                        <input type="range" name="Duration" id="duration" min="1" max="60" step="0.5" value="0.5">
+                        60 min
                     </span>
                 </span>
 
             </fieldset>
 
+<!-- <fieldset> für Wahl der Textur. -->  
             <fieldset id="texture">
-                <legend>Texture</legend>
-                <input type="radio" name="Texture" id="tough" value="tough" checked />
-                <label for="tough">tough</label>
-                <input type="radio" name="Texture" id="liquid" value="liquid" />
-                <label for="liquid">liquid</label>
-                <input type="radio" name="Texture" id="slimy" value="slimy" />
+                <legend>texture</legend>
+                <input type="radio" name="texture" id="ylimy" value="slimy" checked />
                 <label for="slimy">slimy</label>
+                <input type="radio" name="texture" id="liquid" value="liquid" />
+                <label for="liquid">liquid</label>
+                <input type="radio" name="texture" id="sticky" value="sticky" />
+                <label for="sticky">sticky</label>
+                <input type="radio" name="texture" id="chewy" value="chewy" />
+                <label for="chewy">chewy</label>
             </fieldset>
 
-            <fieldset id="finalColor">
-                <legend>Color</legend>
+<!-- <fieldset> für die Farbwahl des Zaubertrankes. -->  
+            <fieldset id="color">
+                <legend>color</legend>
                 <input type="color" name="Color" id="color" value="#ff0000">
             </fieldset>
+        </div>
+    </form>
 
-
-    <form>
+<!-- <form> für Ausgabe des Zaubertrankrezeptes. -->            
+    <form id="recipe">
         <fieldset>
         <div id="finishedrecipe">
             <legend>your recipe</legend>
@@ -137,6 +137,6 @@
         </div>
         </fieldset>
     </form>
-  
+
 </body>
 </html>

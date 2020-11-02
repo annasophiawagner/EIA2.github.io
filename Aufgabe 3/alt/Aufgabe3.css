@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+   
+}
+
+h2 {
+    font-size: 0.8em;
+}
+
+h3 {
+    font-size: 0.5em;
+    margin-top: 2.5em;
+}
+
+legend {
+    font-size: 1.2em;
+    color: black
+}
+
+fieldset {
+    text-align: left;
+    margin-top: 2em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    color: #104e8b ;
+}
+
+#Auswahl {
+    display: grid;
+    grid-template-columns: 40% auto;
+	grid-template-rows: auto auto
+}
+
+#logo {
+    width: 25em;
+    height: auto;
+}
+
+#Bestellung {
+    text-align: left
+}
+
+#Einkaufsliste {
+    height: 25em;
+}
+
+#Gesamt {
+    margin-top: 16em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
