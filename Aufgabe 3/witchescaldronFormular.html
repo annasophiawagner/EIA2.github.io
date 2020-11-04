@@ -27,7 +27,7 @@
 
             <fieldset id="infos">
                 <legend>info & risks </legend>
-                <textarea name="information" rows="2" ></textarea>
+                <textarea name="information" rows="2" placeholder="tell me more.."></textarea>
             </fieldset>
 
             <fieldset>
@@ -49,7 +49,7 @@
                 <span id="slider1">
                     <span>
                         1h
-                        <input type="range" name="Period" id="period" min="1" max="24" step="1" value="1">
+                        <input type="range" name="Period" id="period" min="1" max="24" step="0.5" value="0.5">
                         24h
                     </span>
                 </span>
@@ -66,16 +66,21 @@
                 <label for="spider">spider-legs:</label>
 
                 <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
-
-                <input type="checkbox" name="Extra" class="ingredients" id="blood" value="blood" price="300">
-                <label for="blood">blood (ml):</label>
-
-                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
-
+                
                 <input type="checkbox" name="Extra" class="ingredients" id="fingernail" value="fingernail" price="12">
                 <label for="fingernail">fingernail/s:</label>
 
                 <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkbox" name="Extra" class="ingredients" id="blood" value="blood" price="300">
+                <label for="blood">blood drop:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkboy" name="Extra" class="ingredients" id="wispsofhair" value="wispsofhair" price="25">
+                <label for="">wisps of hair:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" /> 
 
             </fieldset>
 
