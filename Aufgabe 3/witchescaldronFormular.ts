@@ -6,7 +6,7 @@
     }
 
     function handleDesc(_event: Event): void {
-        let formData: FormData = new FormData(document.forms[0]);
+        var formData: FormData = new FormData(document.forms[0]);
         let description: HTMLDivElement = <HTMLDivElement>document.getElementById("description");
         description.innerHTML = "";
 
