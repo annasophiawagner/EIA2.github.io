@@ -6,15 +6,17 @@
     }
 
     function handleDesc(_event: Event): void {
-        var formData: FormData = new FormData(document.forms[0]);
+        let formData: FormData = new FormData(document.forms[0]);
+        console.log(formData);
         let description: HTMLDivElement = <HTMLDivElement>document.getElementById("description");
         description.innerHTML = "";
 
         for (let entry of formData) {
-            description.innerHTML += entry[0] + ": " + entry[1] + "<br>";
+            description.innerHTML +=entry[0] + "; " + entry[1] + "<br>";
         }
 
     }
+    
     function handleIngredients(_event: Event): void {
         let formData: FormData = new FormData(document.forms[1]);
         let recipe: HTMLDivElement = <HTMLDivElement>document.getElementById("recipe");
