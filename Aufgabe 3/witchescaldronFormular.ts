@@ -1,9 +1,12 @@
+   
+    
     window.addEventListener("load", handleLoad);
 
     function handleLoad(_event: Event): void {
         document.getElementById("formDesc").addEventListener("change", handleDesc);
         document.getElementById("ingredients").addEventListener("change", handleIngredients);
     }
+
 
     function handleDesc(_event: Event): void {
         let formData: FormData = new FormData(document.forms[0]);
@@ -83,7 +86,6 @@
             return galleone.toFixed() + " Galleonen, " + sickel.toFixed() + " Sickel, " + knut.toFixed() + " Knut";
 
         }
-
 
     }
 
