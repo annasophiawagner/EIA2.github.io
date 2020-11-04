@@ -50,7 +50,7 @@
                     recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[2] + "<br>";
                     break;
                 case "wispsofhair":
-                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[3] + "<br>";
+                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[3] + "<br>"; 
                 default:
                     recipe.innerHTML += entry[0] + ": " + entry[1] + "<br>";
                     break;
