@@ -44,13 +44,13 @@
         for (let entry of formData) {
             switch (String(entry[1])) {
                 case "spider":
-                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[0] + "<br>";
-                    break;
-                case "blood":
-                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[1] + "<br>";
+                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price = " + price[0] + "<br>";
                     break;
                 case "fingernail":
-                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[2] + "<br>";
+                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price = " + price[1] + "<br>";
+                    break;
+                case "blood":
+                    recipe.innerHTML += entry[0] + ": " + entry[1] + " price = " + price[2] + "<br>";
                     break;
                 default:
                     recipe.innerHTML += entry[0] + ": " + entry[1] + "<br>";
