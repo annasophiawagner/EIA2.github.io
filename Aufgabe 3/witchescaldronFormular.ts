@@ -15,7 +15,7 @@
         description.innerHTML = "";
 
         for (let entry of formData) {
-            description.innerHTML +=entry[0] + "; " + entry[1] + "<br>";
+            description.innerHTML +=entry[0] + ": " + entry[1] + "<br>";
         }
 
     }
