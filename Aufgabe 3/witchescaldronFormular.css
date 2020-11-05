@@ -49,6 +49,8 @@ h3 {left: 50%;
 #bill {
 	 position: relative;
 	 border: black;
+	 background-color: #9b9b9b;
+	 color: white;
      margin: 1em;
  }
 

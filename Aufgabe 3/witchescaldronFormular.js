@@ -9,7 +9,7 @@ function handleDesc(_event) {
     let description = document.getElementById("description");
     description.innerHTML = "";
     for (let entry of formData) {
-        description.innerHTML += entry[0] + "; " + entry[1] + "<br>";
+        description.innerHTML += entry[0] + ": " + entry[1] + "<br>";
     }
 }
 function handleIngredients(_event) {
@@ -41,8 +41,6 @@ function handleIngredients(_event) {
             case "fingernail":
                 recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[2] + "<br>";
                 break;
-            case "wispsofhair":
-                recipe.innerHTML += entry[0] + ": " + entry[1] + " price: " + price[3] + "<br>";
             default:
                 recipe.innerHTML += entry[0] + ": " + entry[1] + "<br>";
                 break;
