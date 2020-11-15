@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="witchescaldronFormular.css" type="text/css" media="screen" />
+    <script src="witchescaldronFormular.js" type="text/javascript" charset="utf-8"></script>
+    <title>witches caldron</title>
+</head>
+
+<body>
+    <header>
+        <h1>witches' caldron</h1>   
+        <p>create your recipe</p>
+    </header>
+    
+
+    <form>
+        <div id="form">
+        <div id="formDesc">
+
+            <fieldset id="recipename">
+                <legend>recipe name</legend>
+                <input type="text" name="recipename" placeholder="..." required/>
+            </fieldset>
+
+            <fieldset id="infos">
+                <legend>info & risks </legend>
+                <textarea name="information" rows="2" placeholder="..."></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>effect</legend>
+                <select name="effect" id="effect">
+                    <option value="love">love</option>
+                    <option value="live">live</option>
+                    <option value="age">age</option>
+                    <option value="death">death</option>
+                    <option value="ugly">ugly</option>
+                    <option value="pretty">pretty</option>
+                    <option value="happy">happy</option>
+                    <option value="sad">sad</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>period</legend>
+                <span id="slider1">
+                    <span>
+                        1h
+                        <input type="range" name="Period" id="period" min="1" max="24" step="0.5" value="0.5">
+                        24h
+                    </span>
+                </span>
+            </fieldset>
+        </div>
+    </form>
+
+    <form>
+        <div id="ingredients">
+
+            <fieldset>
+                <legend>Extras</legend>
+                <input type="checkbox" name="Extra" class="ingredients" id="spider" value="spider-legs" price="100">
+                <label for="spider">spider-legs:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkbox" name="Extra" class="ingredients" id="fingernail" value="fingernail" price="12">
+                <label for="fingernail">fingernail/s:</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                <input type="checkbox" name="Extra" class="ingredients" id="blood" value="blood" price="300">
+                <label for="blood">blood (ml):</label>
+
+                <input type="number" name="Amount" class="amount" step="1" min="0" max="10" value="0" />
+
+                
+
+            </fieldset>
+
+            <fieldset>
+                <legend>temperature</legend>
+                <span id="slider2">
+                    <span>
+                        100°C
+                        <input type="range" name="Temperature" id="temperature" min="100" max="1000" step="100"
+                            value="100">
+                        1000°C
+                    </span>
+                </span>
+            </fieldset>
+
+            <fieldset id="texture">
+                <legend>texture</legend>
+                <input type="radio" name="Texture" id="slimy" value="slimy" checked />
+                <label for="slimy">slimy</label>
+                <input type="radio" name="Texture" id="liquid" value="liquid" />
+                <label for="liquid">liquid</label>
+                <input type="radio" name="Texture" id="chewy" value="chewy" />
+                <label for="chewy">chewy</label>
+            </fieldset>
+
+            <fieldset id="finalColor">
+                <legend>color</legend>
+                <input type="color" name="Color" id="color" value="#ff0000">
+            </fieldset>
+
+            <fieldset>
+                <legend>intensity of stir</legend>
+                <input type="radio" name="Intensity" id="low" value="low" checked />
+                <label for="low">low</label>
+                <input type="radio" name="Intensity" id="middle" value="middle"/>
+                <label for="middle">middle</label>
+                <input type="radio" name="Intensity" id="high" value="high"/>
+                <label for="high">high</label>
+            </fieldset>
+
+            <fieldset id="totalTime">
+                <legend>duration</legend>
+                <span id="slider3">
+                    <span>
+                        1min
+                        <input type="range" name="Duration" id="duration" min="1" max="60" step="1" value="1">
+                        60min
+                    </span>
+                </span>
+            </fieldset>
+
+        </div>
+    </div>
+    </form>
+
+    <div id="bill">
+        <h2>Your recipe</h2>
+        <div id="description"></div>
+        <div id="recipe"></div>
+    </div>
+</body>
+
+</html>
