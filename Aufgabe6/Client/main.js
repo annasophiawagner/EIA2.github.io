@@ -1,4 +1,3 @@
-"use strict";
 //Alle verschiedenen Step types, welche zur Verfügung stehen
 var recipeStepTypes;
 (function (recipeStepTypes) {
