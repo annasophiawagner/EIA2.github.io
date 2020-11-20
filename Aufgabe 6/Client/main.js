@@ -1,4 +1,3 @@
-"use strict";
 //Alle verschiedenen Step types, welche zur Verfügung stehen
 var recipeStepTypes;
 (function (recipeStepTypes) {
@@ -90,7 +89,7 @@ addIngredientButton.addEventListener("click", () => {
     const ingredientsName = ingredientsDropdown.value;
     const ingredientsAmount = ingredientAmount.valueAsNumber;
     //ueber die find funktion zuerst die zutat aus den verfügbaren zutaten finden und dann die unit herausfinden
-    const ingredientUnit = availableIngredients.find(value => value.name == ingredientsName)?.unit;
+    const ingredientUnit = availableIngredients.find(value => value.name == ingredientsName).unit;
     //Zu den Zubereitungsschritten hinzufügen
     recipeSteps.push({
         type: recipeStepTypes.ADD_INGREDIENT,
@@ -182,7 +181,7 @@ function displayIngredients() {
     ingredientsSteps.forEach(ingredientStep => {
         const listItem = document.createElement("li");
         //Preis pro einheit über availableIngredients herausfinden
-        const price = availableIngredients.find(value => value.name == ingredientStep.name)?.price;
+        const price = availableIngredients.find(value => value.name == ingredientStep.name).price;
         const cost = price * ingredientStep.amount;
         totalPrice += cost;
         listItem.innerHTML = ingredientStep.amount + ingredientStep.unit + " of " + ingredientStep.name + " with kost of " + cost + " Knuts required";

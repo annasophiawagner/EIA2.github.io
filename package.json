@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node 'Aufgabe 6/Server/Server.js'"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/annasophiawagner/EIA2.github.io.git"

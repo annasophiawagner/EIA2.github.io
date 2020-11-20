@@ -114,7 +114,7 @@ addIngredientButton.addEventListener("click", () => {
     const ingredientsName = ingredientsDropdown.value;
     const ingredientsAmount = ingredientAmount.valueAsNumber;
     //ueber die find funktion zuerst die zutat aus den verfügbaren zutaten finden und dann die unit herausfinden
-    const ingredientUnit = <string>availableIngredients.find(value => value.name == ingredientsName)?.unit;
+    const ingredientUnit = <string>availableIngredients.find(value => value.name == ingredientsName)!.unit;
 
     //Zu den Zubereitungsschritten hinzufügen
     recipeSteps.push({
@@ -222,7 +222,7 @@ function displayIngredients() {
     ingredientsSteps.forEach(ingredientStep => {
         const listItem: HTMLLIElement = <HTMLLIElement>document.createElement("li");
         //Preis pro einheit über availableIngredients herausfinden
-        const price: number = <number>availableIngredients.find(value => value.name == ingredientStep.name)?.price;
+        const price: number = <number>availableIngredients.find(value => value.name == ingredientStep.name)!.price;
         const cost: number = price * ingredientStep.amount;
         totalPrice += cost;
         listItem.innerHTML = ingredientStep.amount + ingredientStep.unit + " of " + ingredientStep.name + " with kost of " + cost + " Knuts required";
