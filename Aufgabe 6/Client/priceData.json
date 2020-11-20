@@ -1,0 +1,7 @@
+{ 
+    "Extras": [
+        { "name": "spider-leg/s", "price": 100.00 },
+        { "name": "blood (ml)", "price": 300.00 },
+        { "name": "fingernail/s", "price": 12.00 }
+    ]
+}

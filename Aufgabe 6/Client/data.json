@@ -1,0 +1,28 @@
+{ 
+        "Effect": [
+            { "name": "love" },
+            { "name": "power" },
+            { "name": "invisible" },
+            { "name": "EIA-pro" }
+        ],
+
+        "Amount": [
+            { "name": "amount" }
+        ],
+        "Intensity": [
+            { "name": "low" },
+            { "name": "middle" },
+            { "name": "hard" }
+        ],
+        "Texture": [
+            { "name": "tough" },
+            { "name": "liquid" },
+            { "name": "slimy" }
+        ],
+        "Color": [
+            { "name": "#458B74" }
+        ]
+    }
+
+ 
+  
