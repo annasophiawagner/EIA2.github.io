@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node 'Aufgabe 6/Server/Server.js'"
+    "start": "node Aufgabe6/Server/Server.js"
   },
 
   "repository": {
