@@ -207,6 +207,8 @@ async function submitButtonHandler(_event) {
     let query = new URLSearchParams();
     query.append("effects", JSON.stringify(addedEffects));
     query.append("recipeSteps", JSON.stringify(recipeSteps));
+    query.append("name", poisonName.value);
+    query.append("description", poisonDescription.value);
     const response = await fetch("https://avifuwa.herokuapp.com?" + query.toString());
     const data = await response.json();
     alert(JSON.stringify(data));
