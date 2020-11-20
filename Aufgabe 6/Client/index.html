@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hexenkessel</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Potion</h1>
+    </header>
+<div>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+    <br>
+    <br>
+
+    <label for="description">Description</label>
+    <br>
+    <textarea name="description" id="description" cols="30" rows="5"></textarea>
+    <br>
+
+    <h3>Effects</h3>
+    <br>
+    Add <select id="effectsDropdown">
+    <option value="none">No Effects Available</option>
+</select> effect for <input type="time" id="effectTime" value="00:01">
+    <button id="addEffect">ADD</button>
+    <br>
+
+    <h3>Add recipe steps</h3>
+
+    <h4>Add ingredient</h4>
+    Add <select name="ingredientDropdown" id="ingredientDropdown">
+    <option value="none">No ingredient available</option>
+</select> X <input type="number" id="addIngredientAmount">
+    <button id="addIngredient">ADD</button>
+    <br>
+
+    <h4>Get up to Temperature</h4>
+    Bring Potion to <input type="number" id="getToTemperature"> C°
+    <button id="addTemperature">ADD</button>
+
+    <h4>Add stiring</h4>
+    Stir <select name="stirintensity" id="stirintensity">
+    <option value="slow">slow</option>
+    <option value="medium">medium</option>
+    <option value="fast">fast</option>
+</select> for <input type="time" id="stirTime" value="00:01">
+    <button id="addStiring">ADD</button>
+
+    <h4>Wait</h4>
+    Wait for <input type="time" id="waittime" value="00:01">
+    <button id="addWaiting">ADD</button>
+</div>
+<div>
+    <h1>RECIPE: <span id="recipeName"></span></h1>
+    <pre id="recipeDescription"></pre>
+    <h2>Ingredients:</h2>
+    <ul id="ingredientsList"></ul>
+
+    <h2>Effects:</h2>
+    <ul id="effectsList"></ul>
+
+    <h2>Steps</h2>
+    <ol id="stepsList"></ol>
+
+    Total Amount of Costs: <span id="totalCost">0 Knuts</span>
+</div>
+
+<button type="button" id="submit"> submit recipe</button>
+
+<script src="main.js"></script>
+</body>
+</html>
