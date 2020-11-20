@@ -1,3 +1,4 @@
+"use strict";
 //Alle verschiedenen Step types, welche zur Verfügung stehen
 var recipeStepTypes;
 (function (recipeStepTypes) {
@@ -207,8 +208,9 @@ async function submitButtonHandler(_event) {
     let query = new URLSearchParams();
     query.append("effects", JSON.stringify(addedEffects));
     query.append("recipeSteps", JSON.stringify(recipeSteps));
-    await fetch("index.html?" + query.toString());
-    alert("Recipe sent!");
+    const response = await fetch("https://avifuwa.herokuapp.com?" + query.toString());
+    const data = await response.json();
+    alert(JSON.stringify(data));
     console.log(query.toString());
 }
 //# sourceMappingURL=main.js.map
