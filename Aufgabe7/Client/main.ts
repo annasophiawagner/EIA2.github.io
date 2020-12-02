@@ -262,7 +262,8 @@ async function submitButtonHandler(_event:Event): Promise <void> {
     recipe ["steps"] = recipeSteps;
     recipe ["description"] = poisonDescription.value;
     query.append("recipe", JSON.stringify(recipe));
-
+    query.append("type", "put");
+    
     const response: Response = await fetch("https://avifuwa.herokuapp.com?" + query.toString());
     const data = await response.json()
     alert(JSON.stringify(data));
