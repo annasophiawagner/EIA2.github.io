@@ -10,6 +10,7 @@ var recipeStepTypes;
 let recipeSteps = [];
 //alle Effekte welche ausgewählt wurden
 let addedEffects = [];
+let loadedRecipes = {};
 //Alle notwendigen Elemente im Dokument suchen
 const ingredientsDropdown = document.getElementById("ingredientDropdown");
 const effectsDropdown = document.getElementById("effectsDropdown");
@@ -29,6 +30,9 @@ const addWaitButton = document.getElementById("addWaiting");
 const recipeName = document.getElementById("recipeName");
 const recipeDescription = document.getElementById("recipeDescription");
 const submitButton = document.getElementById("submit");
+const recipesDropdown = document.getElementById("availableRecipes");
+const searchRecipesButton = document.getElementById("searchRecipes");
+const loadRecipeButton = document.getElementById("loadRecipe");
 const ingredientsList = document.getElementById("ingredientsList");
 const effectsList = document.getElementById("effectsList");
 const stepsList = document.getElementById("stepsList");
@@ -216,4 +220,16 @@ async function submitButtonHandler(_event) {
     alert(JSON.stringify(data));
     console.log(query.toString());
 }
+searchRecipesButton.addEventListener("click", async function () {
+    const response = await fetch("https://avifuwa.herokuapp.com?type=get");
+    const data = await response.json();
+    recipesDropdown.innerHTML = "";
+    data.forEach(recipe => {
+        const newOption = document.createElement("option");
+        newOption.value = recipe._id;
+        newOption.text = recipe.potion;
+        recipesDropdown.add(newOption);
+    });
+    loadedRecipes = data;
+});
 //# sourceMappingURL=main.js.map
