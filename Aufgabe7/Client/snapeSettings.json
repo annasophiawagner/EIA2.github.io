@@ -1,0 +1,15 @@
+{
+  "effects": ["love", "sad", "happiness", "nerdy"],
+  "ingredients": [
+    {
+      "name": "frog",
+      "unit": "",
+      "price": 30
+    },
+    {
+      "name": "powder",
+      "unit": "g",
+      "price": 8
+    }
+  ]
+}

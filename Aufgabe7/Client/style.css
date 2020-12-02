@@ -1,0 +1,21 @@
+body {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto auto;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+div{
+    border: thin solid black;
+    margin: 2em;
+}
+
+header{
+    grid-column: span 2;
+    text-align: center;
+}
+
+#submit {
+    height: 1em;
+    width: 1.5em;
+}
