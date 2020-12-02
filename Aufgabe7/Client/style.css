@@ -16,6 +16,24 @@ header{
 }
 
 #submit {
-    height: 1em;
-    width: 1.5em;
+    margin-left: 3em;
+    height: 2em;
+    width: 10em;
+    background: grey;
+}
+
+#searchRecipes {
+    height: 2em;
+    width: 10em;
+    background: grey;
+}
+
+#loadRecipe {
+    height: 2em;
+    width: 10em;
+    background: grey;
+}
+
+#database {
+    border: none;
 }
