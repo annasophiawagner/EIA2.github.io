@@ -26,7 +26,7 @@ console.log("Server starting on port:" + port);
 server.listen(port);
 server.addListener("request", handleRequest);
 
-async function handleRequest(_request: http.IncomingMessage, _response: http.ServerResponse): void {
+async function handleRequest(_request: http.IncomingMessage, _response: http.ServerResponse): Promise<void> {
     console.log("What's up?");
 
     _response.setHeader("content-type", "text/html; charset=utf-8");
