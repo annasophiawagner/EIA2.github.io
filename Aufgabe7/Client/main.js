@@ -232,4 +232,17 @@ searchRecipesButton.addEventListener("click", async function () {
     });
     loadedRecipes = data;
 });
+loadRecipeButton.addEventListener("click", function () {
+    let selectedID = recipesDropdown.value;
+    let selectedrecipe = loadedRecipes.find(function (recipe) {
+        return recipe._id == selectedID;
+    });
+    addedEffects = selectedrecipe.effects;
+    recipeSteps = selectedrecipe.steps;
+    poisonName.value = selectedrecipe.potion;
+    poisonDescription.value = selectedrecipe.description;
+    displayEffects();
+    displayRecipeSteps();
+    displayIngredients();
+});
 //# sourceMappingURL=main.js.map
