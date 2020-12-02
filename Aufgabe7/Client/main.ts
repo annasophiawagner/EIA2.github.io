@@ -17,6 +17,7 @@ enum recipeStepTypes {
 let recipeSteps: { type: recipeStepTypes, [key: string]: any }[] = [];
 //alle Effekte welche ausgewählt wurden
 let addedEffects: { name: string, duration: string } [] = [];
+let loadedRecipes: any = {};
 
 //Alle notwendigen Elemente im Dokument suchen
 const ingredientsDropdown: HTMLSelectElement = <HTMLSelectElement>document.getElementById("ingredientDropdown");
@@ -37,6 +38,9 @@ const addWaitButton: HTMLButtonElement = <HTMLButtonElement>document.getElementB
 const recipeName: HTMLSpanElement = <HTMLSpanElement>document.getElementById("recipeName");
 const recipeDescription: HTMLPreElement = <HTMLPreElement>document.getElementById("recipeDescription");
 const submitButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submit");
+const recipesDropdown: HTMLSelectElement = <HTMLSelectElement>document.getElementById("availableRecipes");
+const searchRecipesButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("searchRecipes");
+const loadRecipeButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("loadRecipe");
 
 
 const ingredientsList: HTMLUListElement = <HTMLUListElement>document.getElementById("ingredientsList");
@@ -264,3 +268,17 @@ async function submitButtonHandler(_event:Event): Promise <void> {
     alert(JSON.stringify(data));
     console.log(query.toString());
 }
+
+searchRecipesButton.addEventListener("click", async function() {
+    const response: Response = await fetch("https://avifuwa.herokuapp.com?type=get");
+    const data = await response.json();
+    recipesDropdown.innerHTML = "";
+    data.forEach(recipe => {
+        const newOption = document.createElement("option");
+        newOption.value = recipe._id;
+        newOption.text = recipe.potion;
+        recipesDropdown.add(newOption);
+    });
+    loadedRecipes = data;
+    
+});
