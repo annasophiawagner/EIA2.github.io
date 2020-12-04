@@ -34,6 +34,7 @@ header{
     height: 2em;
     width: 10em;
     background: grey;
+    color: white;
 }
 
 #database {
