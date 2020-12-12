@@ -160,16 +160,16 @@ function drawTree () {
 
 //Bäume erstellen
 function createTree(x, y, crc2) {
-crc2.fillStyle = "#8B4513";
-crc2.fillRect(x, y, 12, 20);
-crc2.beginPath();
-crc2.moveTo(x - 14, y);
-crc2.lineTo(x + 26, y);
-crc2.lineTo(x + 4, y - 60);
-crc2.lineTo(x - 14, y);
-crc2.fillStyle = "green";
-crc2.fill();
-crc2.closePath();
+    crc2.fillStyle = "#8B4513";
+    crc2.fillRect(x, y, 12, 20);
+    crc2.beginPath();
+    crc2.moveTo(x - 14, y);
+    crc2.lineTo(x + 26, y);
+    crc2.lineTo(x + 4, y - 60);
+    crc2.lineTo(x - 14, y);
+    crc2.fillStyle = "green";
+    crc2.fill();
+    crc2.closePath();
 }
 
 // Schneeflocken
