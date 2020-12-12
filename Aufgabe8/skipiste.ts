@@ -186,6 +186,8 @@ for (var i = 1; i < 40; i++) {
    crc2.fill();
    crc2.closePath();
  }
+
+
  
 
 
