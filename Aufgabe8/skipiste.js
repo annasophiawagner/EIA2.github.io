@@ -14,10 +14,6 @@ drawTree();
 //Skifahrer
 let Skier = [];
 Skier.push(new SkiFahrer(200, 300, "red"));
-function drawSkier() {
-    for (let ; ; )
-        ;
-}
 //Hintergrund
 function drawBackground() {
     //Himmel
