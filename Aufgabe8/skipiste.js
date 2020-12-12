@@ -11,11 +11,13 @@ drawBackground();
 drawSun();
 drawLift();
 drawTree();
-let SkiMännchen = [];
-SkiMännchen.push(new SkiFahrer(200, 300, "red"));
-for (let skifaf of SkiMännchen) {
+//Skifahrer
+let Skier = [];
+Skier.push(new SkiFahrer(200, 300, "red"));
+function drawSkier() {
+    for (let ; ; )
+        ;
 }
-;
 //Hintergrund
 function drawBackground() {
     //Himmel

@@ -18,15 +18,13 @@ drawLift();
 drawTree();
 
 
-let SkiMännchen: SkiFahrer[] = [];
+//Skifahrer
+let Skier: SkiFahrer[] = [];
 
-SkiMännchen.push(new SkiFahrer(200, 300, "red"));
-
-for(let skifaf of SkiMännchen){
-
-};
-
-
+Skier.push(new SkiFahrer(200, 300, "red"));
+function drawSkier(){
+    for(let)
+}
 
 //Hintergrund
 function drawBackground () {
@@ -164,6 +162,10 @@ for (var i = 1; i < 40; i++) {
    crc2.closePath();
  }
  
+
+
+
+
  
  
  
