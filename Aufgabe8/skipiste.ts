@@ -10,6 +10,19 @@ class SkiFahrer {
         this.y = y;
         this.color = color;
     }
+
+    public drawSkier () {
+        crc2.fillStyle = this.color;
+        crc2.beginPath();
+        crc2.arc(this.x + 5, this.y + 5, 8, 0, 2 * Math.PI);
+        crc2.fill();
+        crc2.fillRect(this.x, this.y, 10, 40);
+        crc2.lineWidth = 2;
+        crc2.beginPath();
+        crc2.moveTo(this.x - 20, this.y + 46);
+        crc2.lineTo(this.x + 19, this.y + 38);
+        crc2.stroke();
+    }
 }
 
 drawBackground();
@@ -19,11 +32,24 @@ drawTree();
 
 
 //Skifahrer
-let Skier: SkiFahrer[] = [];
+let Skiers: SkiFahrer[] = [];
 
-Skier.push(new SkiFahrer(200, 300, "red"));
+Skiers.push(new SkiFahrer(250, 300, "#27b4df"));
+Skiers.push(new SkiFahrer(300, 450, "#d84b20"));
+Skiers.push(new SkiFahrer(450, 500, "#7fb0b2"));
+Skiers.push(new SkiFahrer(500, 200, "#cf3476"));
+Skiers.push(new SkiFahrer(290, 340, "#cf3476"));
+Skiers.push(new SkiFahrer(450, 290, "#27b4df"));
+Skiers.push(new SkiFahrer(290, 190, "#7fb0b2"));
+Skiers.push(new SkiFahrer(560, 300, "#cf3476"));
 
 
+function drawSkiers() {
+    for(let Skier of Skiers){
+        Skier.drawSkier();
+    }
+}
+drawSkiers();
 
 //Hintergrund
 function drawBackground () {
