@@ -121,4 +121,17 @@ function createTree(x, y, crc2) {
     crc2.fill();
     crc2.closePath();
 }
+// Schneeflocken
+for (var i = 1; i < 40; i++) {
+    createSnowflake(Math.floor(Math.random() * (800 + 1)), Math.floor(Math.random() * (600 + 1)), crc2);
+}
+function createSnowflake(x, y, crc2) {
+    crc2.beginPath();
+    crc2.arc(x, y, 4, 0 * Math.PI, 2.0 * Math.PI);
+    crc2.strokeStyle = "#BDBDBD";
+    crc2.stroke();
+    crc2.fillStyle = "white";
+    crc2.fill();
+    crc2.closePath();
+}
 //# sourceMappingURL=skipiste.js.map
