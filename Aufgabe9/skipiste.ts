@@ -1,56 +1,52 @@
+namespace SKIPISTE {
 const canvas = <HTMLCanvasElement>document.getElementById("slope")
-const crc2 = canvas.getContext("2d")
+export const crc2 = canvas.getContext("2d")
 
-class SkiFahrer {
-    public x;
-    public y;
-    public color: string;
 
-    constructor (x: number, y: number, color: string) {
-        this.x = x;
-        this.y = y;
-        this.color = color;
-    }
 
-    public drawSkier () {
-        crc2.fillStyle = this.color;
-        crc2.beginPath();
-        crc2.arc(this.x + 5, this.y + 5, 8, 0, 2 * Math.PI);
-        crc2.fill();
-        crc2.fillRect(this.x, this.y, 10, 40);
-        crc2.lineWidth = 2;
-        crc2.beginPath();
-        crc2.moveTo(this.x - 20, this.y + 46);
-        crc2.lineTo(this.x + 19, this.y + 38);
-        crc2.stroke();
-    }
-}
+// Schneeflocken
+let snowflakes = [];
 
-drawBackground();
-drawSun();
-drawLift();
-drawTree();
-
+for (var i = 1; i < 40; i++) {
+    snowflakes.push(new Snowflake(Math.floor(Math.random()  * (800 + 1)), Math.floor(Math.random()  * (600 + 1))));
+  }
 
 //Skifahrer
 let Skiers: SkiFahrer[] = [];
 
-Skiers.push(new SkiFahrer(250, 300, "#27b4df"));
-Skiers.push(new SkiFahrer(300, 450, "#d84b20"));
-Skiers.push(new SkiFahrer(450, 500, "#7fb0b2"));
-Skiers.push(new SkiFahrer(500, 200, "#cf3476"));
-Skiers.push(new SkiFahrer(290, 340, "#cf3476"));
-Skiers.push(new SkiFahrer(450, 290, "#27b4df"));
-Skiers.push(new SkiFahrer(290, 190, "#7fb0b2"));
-Skiers.push(new SkiFahrer(560, 300, "#cf3476"));
+Skiers.push(new SkiFahrer(250, 300, "#27b4df", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(300, 450, "#d84b20", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(450, 500, "#7fb0b2", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(500, 200, "#cf3476", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(290, 340, "#cf3476", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(450, 290, "#27b4df", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(290, 190, "#7fb0b2", (Math.random()*2)+1));
+Skiers.push(new SkiFahrer(560, 300, "#cf3476", (Math.random()*2)+1));
 
 
 function drawSkiers() {
     for(let Skier of Skiers){
-        Skier.drawSkier();
+        Skier.update();
     }
 }
-drawSkiers();
+
+
+//Update
+updateframe();
+
+function updateframe() {
+    requestAnimationFrame(updateframe);
+    drawBackground();
+    drawSun();
+    drawSkiers();
+    drawTree();
+    drawLift();
+
+    for (let snowflake of snowflakes){
+        snowflake.update();
+    }
+
+}
 
 //Hintergrund
 function drawBackground () {
@@ -173,21 +169,7 @@ function createTree(x, y, crc2) {
     crc2.closePath();
 }
 
-// Schneeflocken
-for (var i = 1; i < 40; i++) {
-    createSnowflake(Math.floor(Math.random()  * (800 + 1)), Math.floor(Math.random()  * (600 + 1)), crc2);
-  }
-
- function createSnowflake (x: number, y:number, crc2:any) : void {
-   crc2.beginPath();
-   crc2.arc(x, y, 4, 0 * Math.PI, 2.0 * Math.PI);
-   crc2.strokeStyle = "#BDBDBD";
-   crc2.stroke();
-   crc2.fillStyle = "white";
-   crc2.fill();
-   crc2.closePath();
- }
-
+}
 
  
 
