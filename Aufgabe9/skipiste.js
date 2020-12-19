@@ -1,7 +1,7 @@
 var SKIPISTE;
 (function (SKIPISTE) {
-    const canvas = document.getElementById("slope");
-    SKIPISTE.crc2 = canvas.getContext("2d");
+    SKIPISTE.canvas = document.getElementById("slope");
+    SKIPISTE.crc2 = SKIPISTE.canvas.getContext("2d");
     // Schneeflocken
     let snowflakes = [];
     for (var i = 1; i < 40; i++) {
@@ -20,6 +20,11 @@ var SKIPISTE;
     function drawSkiers() {
         for (let Skier of Skiers) {
             Skier.update();
+        }
+    }
+    //Sonne
+    function drawSun() {
+        for (let i = 0; i < 1; i++) {
         }
     }
     //Update
@@ -89,14 +94,6 @@ var SKIPISTE;
         SKIPISTE.crc2.fillStyle = "#faffff";
         SKIPISTE.crc2.fill();
         SKIPISTE.crc2.beginPath();
-    }
-    //Sonne
-    function drawSun() {
-        SKIPISTE.crc2.beginPath();
-        SKIPISTE.crc2.arc(100, 70, 50, 0, 2 * Math.PI);
-        SKIPISTE.crc2.fillStyle = "yellow";
-        SKIPISTE.crc2.fill();
-        SKIPISTE.crc2.closePath();
     }
     //Skilift
     function drawLift() {

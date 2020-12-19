@@ -1,5 +1,5 @@
 namespace SKIPISTE {
-const canvas = <HTMLCanvasElement>document.getElementById("slope")
+export const canvas = <HTMLCanvasElement>document.getElementById("slope")
 export const crc2 = canvas.getContext("2d")
 
 
@@ -29,6 +29,13 @@ function drawSkiers() {
         Skier.update();
     }
 }
+
+//Sonne
+function drawSun(){
+    for (let i: number = 0; i < 1; i++) {
+
+        }
+    }
 
 
 //Update
@@ -111,15 +118,6 @@ function drawBackground () {
     crc2.fill();
     crc2.beginPath();
 }
-
-//Sonne
-function drawSun () : void {
-    crc2.beginPath();
-    crc2.arc(100, 70, 50, 0, 2 * Math.PI);
-    crc2.fillStyle = "yellow";
-    crc2.fill();
-    crc2.closePath();
-  }
 
 
 //Skilift
