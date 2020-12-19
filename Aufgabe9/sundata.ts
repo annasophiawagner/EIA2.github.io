@@ -22,7 +22,6 @@ namespace SKIPISTE {
     if (this.x > 800) {
         this.x = 0
     } 
-
     this.x += 0.01;
     }
 

@@ -1,4 +1,5 @@
 namespace SKIPISTE {
+    
 export class Snowflake {
     public x: number;
     public y: number;
