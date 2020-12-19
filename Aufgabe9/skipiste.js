@@ -23,11 +23,10 @@ var SKIPISTE;
         }
     }
     //Sonne
-    let Sundata = [];
     function drawSun() {
         for (let i = 0; i < 1; i++) {
-            let sun = new Sundata(Math.random() * (770 - 360 + 1) + 360, Math.random() * (100 - 30 + 1) + 30);
-            Sundata.push(sun);
+            let Sundata = new SKIPISTE.sun(Math.random() * (0 - 400 + 1) + 360, Math.random() * (140 - 30 + 1) + 40);
+            Sundata.update();
         }
     }
     //Update

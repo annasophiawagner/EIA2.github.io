@@ -21,9 +21,8 @@ namespace SKIPISTE {
     this.drawSun();
     if (this.x > 800) {
         this.x = 0
-    }
-    else 
-    this.x += 1;
+    } 
+
     this.x += 0.01;
     }
 
