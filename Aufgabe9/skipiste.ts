@@ -31,11 +31,13 @@ function drawSkiers() {
 }
 
 //Sonne
-function drawSun(){
-    for (let i: number = 0; i < 1; i++) {
+let Sundata = [];
 
-        }
+function drawSun(){
+    for (let _sun of Sundata){
+        Sundata.update();
     }
+}
 
 
 //Update
@@ -52,7 +54,6 @@ function updateframe() {
     for (let snowflake of snowflakes){
         snowflake.update();
     }
-
 }
 
 //Hintergrund

@@ -23,8 +23,10 @@ var SKIPISTE;
         }
     }
     //Sonne
+    let Sundata = [];
     function drawSun() {
-        for (let i = 0; i < 1; i++) {
+        for (let _sun of Sundata) {
+            Sundata.update();
         }
     }
     //Update
