@@ -1,5 +1,5 @@
 namespace SKIPISTE {
-export const canvas = <HTMLCanvasElement>document.getElementById("slope")
+const canvas = <HTMLCanvasElement>document.getElementById("slope")
 export const crc2 = canvas.getContext("2d")
 
 
@@ -33,12 +33,12 @@ function drawSkiers() {
 //Sonne
 let Sundata = [];
 
-function drawSun(){
-    for (let _sun of Sundata){
-        Sundata.update();
-    }
+function drawSun() {
+for (let i: number = 0; i < 1; i++) {
+    let sun: sun = new Sundata (Math.random() * (770 - 360 + 1) + 360, Math.random() * (100 - 30 + 1) + 30);
+    Sundata.push(sun);
+  }
 }
-
 
 //Update
 updateframe();

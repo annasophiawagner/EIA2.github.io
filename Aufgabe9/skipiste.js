@@ -1,7 +1,7 @@
 var SKIPISTE;
 (function (SKIPISTE) {
-    SKIPISTE.canvas = document.getElementById("slope");
-    SKIPISTE.crc2 = SKIPISTE.canvas.getContext("2d");
+    const canvas = document.getElementById("slope");
+    SKIPISTE.crc2 = canvas.getContext("2d");
     // Schneeflocken
     let snowflakes = [];
     for (var i = 1; i < 40; i++) {
@@ -25,8 +25,9 @@ var SKIPISTE;
     //Sonne
     let Sundata = [];
     function drawSun() {
-        for (let _sun of Sundata) {
-            Sundata.update();
+        for (let i = 0; i < 1; i++) {
+            let sun = new Sundata(Math.random() * (770 - 360 + 1) + 360, Math.random() * (100 - 30 + 1) + 30);
+            Sundata.push(sun);
         }
     }
     //Update
