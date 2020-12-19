@@ -24,4 +24,4 @@ var SKIPISTE;
     }
     SKIPISTE.Snowflake = Snowflake;
 })(SKIPISTE || (SKIPISTE = {}));
-//# sourceMappingURL=Snowflake.js.map
+//# sourceMappingURL=snowflake.js.map

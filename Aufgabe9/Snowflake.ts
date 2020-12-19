@@ -20,6 +20,7 @@ export class Snowflake {
     }
 
     public update() {
+
         this.y += 1;
     
         if (this.y > 600) {
