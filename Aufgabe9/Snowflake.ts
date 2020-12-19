@@ -21,12 +21,12 @@ export class Snowflake {
     }
 
     public update() {
-
-        this.y += 1;
-    
         if (this.y > 600) {
             this.y = 0;
         }
+        else
+        this.y += 1;
+
     this.drawSnowflake();
     }
 }

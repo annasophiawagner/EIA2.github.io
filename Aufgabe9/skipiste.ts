@@ -1,4 +1,5 @@
 namespace SKIPISTE {
+
 const canvas = <HTMLCanvasElement>document.getElementById("slope")
 export const crc2 = canvas.getContext("2d")
 
