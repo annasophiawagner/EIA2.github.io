@@ -23,18 +23,12 @@ var SKIPISTE;
         }
     }
     //Sonne
-    function drawSun() {
-        for (let i = 0; i < 1; i++) {
-            let Sundata = new SKIPISTE.sun(Math.random() * (0 - 400 + 1) + 360, Math.random() * (140 - 30 + 1) + 40);
-            Sundata.update();
-        }
-    }
+    let Sundata = new SKIPISTE.sun(Math.random() * (0 - 400 + 1) + 360, Math.random() * (140 - 30 + 1) + 40);
     //Update
     updateframe();
     function updateframe() {
         requestAnimationFrame(updateframe);
         drawBackground();
-        drawSun();
         drawSkiers();
         drawTree();
         drawLift();
@@ -53,6 +47,7 @@ var SKIPISTE;
         grd2.addColorStop(1, "white");
         SKIPISTE.crc2.fillStyle = grd;
         SKIPISTE.crc2.fillRect(0, 0, 800, 600);
+        Sundata.update();
         //Berge
         //Berg1
         SKIPISTE.crc2.beginPath();

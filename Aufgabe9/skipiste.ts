@@ -31,12 +31,8 @@ function drawSkiers() {
 }
 
 //Sonne
-function drawSun() {
-for (let i: number = 0; i < 1; i++) {
-    let Sundata: sun = new sun (Math.random() * (0 - 400 + 1)+360, Math.random() * (140 - 30 + 1)+40);
-    Sundata.update();
-  }
-}
+let Sundata: sun = new sun (Math.random() * (0 - 400 + 1)+360, Math.random() * (140 - 30 + 1)+40);
+
 
 //Update
 updateframe();
@@ -44,7 +40,6 @@ updateframe();
 function updateframe() {
     requestAnimationFrame(updateframe);
     drawBackground();
-    drawSun();
     drawSkiers();
     drawTree();
     drawLift();
@@ -66,6 +61,8 @@ function drawBackground () {
     crc2.fillStyle = grd;
     crc2.fillRect(0, 0, 800, 600);
 
+    Sundata.update();
+    
     //Berge
     //Berg1
     crc2.beginPath();

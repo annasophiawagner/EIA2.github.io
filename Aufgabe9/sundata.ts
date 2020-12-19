@@ -22,11 +22,10 @@ namespace SKIPISTE {
     if (this.x > 800) {
         this.x = 0
     } 
-    this.x += 0.01;
+    this.x += 1;
     }
 
     public update(){
-        this.drawSun();
         this.moveSun();
     }
 }}
