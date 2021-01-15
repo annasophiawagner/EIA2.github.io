@@ -3,21 +3,21 @@ namespace SKIPISTE {
 const canvas = <HTMLCanvasElement>document.getElementById("slope")
 export const crc2 = canvas.getContext("2d")
 
+
 var movingObejcts: MovingObject [] = [];
 
-
 //Skifahrer
-movingObejcts.push(new SkiFahrer(250, 300, "#27b4df", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(300, 450, "#d84b20", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(450, 500, "#7fb0b2", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(500, 200, "#cf3476", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(290, 340, "#cf3476", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(450, 290, "#27b4df", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(290, 190, "#7fb0b2", (Math.random()*2)+1));
-movingObejcts.push(new SkiFahrer(560, 300, "#cf3476", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(250, 300, "#27b4df", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(300, 450, "#d84b20", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(450, 500, "#7fb0b2", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(500, 200, "#cf3476", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(290, 340, "#cf3476", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(450, 290, "#27b4df", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(290, 190, "#7fb0b2", (Math.random()*2)+1));
+skiers.push(new SkiFahrer(560, 300, "#cf3476", (Math.random()*2)+1));
+
 
 // Schneeflocken
-
 for (var i = 1; i < 40; i++) {
     movingObejcts.push(new Snowflake(Math.floor(Math.random()  * (800 + 1)), Math.floor(Math.random()  * (600 + 1))));
   }
