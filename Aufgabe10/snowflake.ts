@@ -1,12 +1,8 @@
 namespace SKIPISTE {
     
-export class Snowflake implements MovingObject{
-    public x: number;
-    public y: number;
-
+export class Snowflake extends MovingObject{
     constructor (x: number, y: number){
-        this.x = x;
-        this.y = y;
+        super(x,y);
     }
 
 

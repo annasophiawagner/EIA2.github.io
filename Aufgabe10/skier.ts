@@ -1,16 +1,12 @@
 namespace SKIPISTE {
 
-export class SkiFahrer implements MovingObject {
-    public x: number;
-    public y: number;
+export class SkiFahrer extends MovingObject {
     public color: string;
     public v: number;
     public moveright: boolean = Math.random() < 0.5;
 
-
     constructor (x: number, y: number, color: string, v: number) {
-        this.x = x;
-        this.y = y;
+        super(x,y)
         this.color = color;
         this.v = v;
     }
