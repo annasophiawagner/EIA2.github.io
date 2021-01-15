@@ -5,11 +5,6 @@ export const crc2 = canvas.getContext("2d")
 
 var movingObejcts: MovingObject [] = [];
 
-// Schneeflocken
-
-for (var i = 1; i < 40; i++) {
-    movingObejcts.push(new Snowflake(Math.floor(Math.random()  * (800 + 1)), Math.floor(Math.random()  * (600 + 1))));
-  }
 
 //Skifahrer
 movingObejcts.push(new SkiFahrer(250, 300, "#27b4df", (Math.random()*2)+1));
@@ -21,6 +16,11 @@ movingObejcts.push(new SkiFahrer(450, 290, "#27b4df", (Math.random()*2)+1));
 movingObejcts.push(new SkiFahrer(290, 190, "#7fb0b2", (Math.random()*2)+1));
 movingObejcts.push(new SkiFahrer(560, 300, "#cf3476", (Math.random()*2)+1));
 
+// Schneeflocken
+
+for (var i = 1; i < 40; i++) {
+    movingObejcts.push(new Snowflake(Math.floor(Math.random()  * (800 + 1)), Math.floor(Math.random()  * (600 + 1))));
+  }
 
 //Sonne
 let Sundata: sun = new sun (Math.random() * (0 - 400 + 1)+360, Math.random() * (140 - 30 + 1)+40);
