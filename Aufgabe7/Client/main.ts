@@ -175,14 +175,14 @@ function displayEffects() {
     //Effekte-Liste bereinigen
     effectsList.innerHTML = "";
 
-    //Für jeden ausgewählten Effekt ein eintrag in der Liste hinzufügen
+    //Für jeden ausgewählten Effekt ein Eintrag in der Liste hinzufügen
     addedEffects.forEach((effect, index) => {
         //erstellen eines li Elements
         const listItem: HTMLLIElement = <HTMLLIElement>document.createElement("li");
         //Bearbeiten des inhalts
         listItem.innerHTML = effect.name + " for" + effect.duration + "h";
 
-        //hinzufügen del Löschen buttons (aufruf der deleteEffect funktion mit dem eigenen index)
+        //hinzufügen des Löschen-buttons (aufruf der deleteEffect funktion mit dem eigenen index)
         listItem.innerHTML += "<button onclick = 'deleteEffect(" + index + ")'> DELETE </button>";
 
         //Hinzufügen zu der Effekte Liste
@@ -239,7 +239,7 @@ function displayIngredients() {
 }
 
 function deleteEffect(toDeteleIndex: number) {
-    //löschen des übergebenen Indexes mithilfe der filter funktion
+    //löschen des übergebenen Indexes mithilfe der filter Funktion
     //(Array behält alle werte für die die funktion true ergibt)
     addedEffects = addedEffects.filter((_value, index) => index != toDeteleIndex);
     displayEffects();

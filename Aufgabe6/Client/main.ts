@@ -99,7 +99,7 @@ poisonDescription.addEventListener("input", () => {
 
 //Add Effekt Button
 addEffectButton.addEventListener("click", () => {
-    //holen von effektname und dauer von den HTML Elementen
+    //holen von Effektname und dauer von den HTML Elementen
     const effectname: string = effectsDropdown.value;
     const duration: string = effectDuration.value;
     //hinzufügen auf die Globale Variable addedEffects
